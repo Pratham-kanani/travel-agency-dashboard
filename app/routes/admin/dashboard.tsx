@@ -8,6 +8,7 @@ const { totalUsers, usersJoined, totalTrips, tripsCreated, userRole } = dashboar
 
 export const clientLoader = async () => await getUser();
 
+
 const Dashboard = ({ loaderData } : Route.ComponentProps) => {
   const user = loaderData as unknown as User | null;
 
