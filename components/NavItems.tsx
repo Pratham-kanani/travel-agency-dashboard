@@ -26,7 +26,7 @@ const NavItems = ({handleClick} : {handleClick? : () => void}) => {
                   <div className={cn('group nav-item', {
                     'bg-primary-100 !text-white': isActive
                   })} onClick={handleClick}>
-                    <img src="{icon}" alt="{label}" className={`group-hover:brightness-0 size-5 group-hover:invert ${isActive? 'brightness-0':'text-dark-200'}`}/>
+                    <img src={icon} alt="{label}" className={`group-hover:brightness-0 size-5 group-hover:invert ${isActive? 'brightness-0':'text-dark-200'}`}/>
                     {label}
                     </div>
                 )}
