@@ -7,7 +7,7 @@ import { useState } from "react";
 import { PagerComponent } from "@syncfusion/ej2-react-grids";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
-    const limit = 1;
+    const limit = 8;
     const url = new URL(request.url);
     const page = parseInt(url.searchParams.get('page') || '1', 10);
     const offset = (page - 1) * limit;
@@ -67,7 +67,7 @@ const Trips = ({ loaderData }: Route.ComponentProps) => {
 
         <PagerComponent
           totalRecordsCount={loaderData.total}
-          pageSize={1}
+          pageSize={8}
           currentPage={currentPage}
           click={(args) => handlePageChange(args.currentPage)}
           cssClass="!mb-4"
